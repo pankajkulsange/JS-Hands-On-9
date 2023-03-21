@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>javascript handson 9</title>
+  </head>
+  <body>
+    <h1>Strings</h1>
+    <p>Que1: Find the Smaller Angle</p>
+
+    <fieldset>
+      <pre>
+Ans:
+
+var Minimal_Angle = (h, m) => 
+{
+    let hourAngle = (h % 12) * 30 + m / 2;
+    let minuteAngle = m * 6;
+    let angleDiff = Math.abs(hourAngle - minuteAngle);
+    let angle = Math.min(angleDiff, 360 - angleDiff);
+    return angle;   
+};
+</pre
+      >
+    </fieldset>
+
+    <p>Que2: Check whether the year is Leap year or not.</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Check_Leap = (year) => 
+{
+ if(year % 400 === 0) return "Leap Year";
+ if(year % 100 === 0) return "Non Leap Year";
+ if(year % 4 === 0) return "Leap Year";
+ 
+ return "Non Leap Year";
+};
+    </fieldset>
+    <p>Que3: Perfect Number Check.</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Perfect_Check = (N) => 
+{
+ let temp = 0;
+ for(let i = 0; i < N/2; i++){
+   if(N%i === 0)
+   {
+     temp += i;
+   }
+ }
+ if(temp === N && temp !== 0){
+   return "YES";
+ }
+ return "NO";
+};
+    </pre
+      >
+    </fieldset>
+    <p>Que4: Reverse a Number.</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Reverse_Number = (N) => 
+{
+   let newNum = 0
+  let temp = 0;
+  while(N > 0){
+    temp = N%10;
+    newNum = newNum*10+ temp;
+    N = Math.floor(N/10);
+  }
+  return newNum;
+};
+    </pre
+      >
+    </fieldset>
+    <p>Que5: Substring Check.</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Substring_Check = (S1, S2) => 
+{
+    if (S1.includes(S2)) {
+        return "YES";
+} else {
+    return "NO";
+    }   
+};
+    </pre
+      >
+    </fieldset>
+  </body>
+</html>
